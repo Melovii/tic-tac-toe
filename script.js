@@ -126,8 +126,8 @@ const Game = (() => {
     return { init, startGame };
 })();
 
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
+const startGameBtn = document.querySelector('.start-game');
+startGameBtn.addEventListener('click', () => {
     Game.init(Gameboard);
     Game.startGame();
 });

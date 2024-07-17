@@ -10,7 +10,39 @@
     <link rel="icon" href="./media/icons/binary.svg">
 </head>
 <body>
-    <button>Click me! (start game)</button>
+    <div class="top-section">
+        <div class="logo">
+            <button class="one"><img class="one" src="media/icons/a.svg"></button>
+            <button class="two"><img class="two" src="media/icons/a1.svg"></button>
+        </div>
+        <div class="turn">my turn</div>
+        <button class="reset">reset</button>
+    </div>
+    <main class="main-content">
+        <div class="gameboard">
+            <div class="box" data-index="1"></div>
+            <div class="box" data-index="2"></div>
+            <div class="box" data-index="3"></div>
+            <div class="box" data-index="4"></div>
+            <div class="box" data-index="5"></div>
+            <div class="box" data-index="6"></div>
+            <div class="box" data-index="7"></div>
+            <div class="box" data-index="8"></div>
+            <div class="box" data-index="9"></div>
+        </div>
+    </main>
+    <div class="bottom-section">
+        <div class="user-score">your score</div>
+        <div class="draws">draws</div>
+        <div class="pc-score">pc's score</div>
+    </div>
+    <footer>
+        <p>Copyright © 2024 melovii</p>
+        <a href="https://github.com/melovii" target="blank">
+            <img class="github" src="media/icons/github.svg" aria-hidden="true" alt="github logo"></img>
+        </a>
+    </footer>
+    <button class="start-game">Click me! (start game)</button>
 </body>
 <script src="script.js"></script>
 </html>
