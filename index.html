@@ -15,10 +15,15 @@
             <button class="one"><img class="one" src="media/icons/a.svg"></button>
             <button class="two"><img class="two" src="media/icons/a1.svg"></button>
         </div>
-        <div class="turn">my turn</div>
-        <button class="reset">reset</button>
+        <div class="turn"></div>
+        <button class="reset"><img class="reset-arrow" src="./media/icons/reset.svg" alt="reset icon"></button>
     </div>
     <main class="main-content">
+        <div class="winner-announcement">
+            <div class="winner-square">
+                <p class="winner-text"></p>
+            </div>
+        </div>
         <div class="gameboard">
             <div class="box" data-index="1"></div>
             <div class="box" data-index="2"></div>
@@ -32,9 +37,15 @@
         </div>
     </main>
     <div class="bottom-section">
-        <div class="user-score">your score</div>
-        <div class="draws">draws</div>
-        <div class="pc-score">pc's score</div>
+        <div class="player1">
+            <p class="p1-scoreholder"><p>&nbsp;</p><p class="p1-score">0</p></p>
+        </div>
+        <div class="draws">
+            <p>Draws: <b class="draws-score">0</b></p>
+        </div>
+        <div class="player2">
+            <p class="p2-scoreholder"><p>&nbsp;</p><p class="p2-score">0</p></p>
+        </div>
     </div>
     <footer>
         <p>Copyright © 2024 melovii</p>
@@ -42,7 +53,6 @@
             <img class="github" src="media/icons/github.svg" aria-hidden="true" alt="github logo"></img>
         </a>
     </footer>
-    <button class="start-game">Click me! (start game)</button>
 </body>
 <script src="script.js"></script>
 </html>
