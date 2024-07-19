@@ -17,7 +17,6 @@ const Gameboard = (() => {
     const handleBoxClick = (event) => {
         // get box ID on click
         const boxIndex = event.target.dataset.index;
-        console.log(`testing ${boxIndex}`);
         Game.playRound(boxIndex);
     };
 
@@ -79,7 +78,6 @@ const Game = (() => {
     };
 
     const startGame = () => {
-        console.log('testing startGame()');
         playRound();
     };
 
@@ -107,7 +105,6 @@ const Game = (() => {
     };
 
     const updateGameboard = (choice) => {
-        console.log('testing updateGameboard()');
         let currentBoard = gameboard.getBoard();
         let player = Game.getCurrentPlayer();
         const box = document.querySelector(`.box[data-index="${choice}"]`);
@@ -117,11 +114,9 @@ const Game = (() => {
             box.textContent = currentPlayer.number === 1 ? '1' : '0';
 
             let state = checkWinner();
-            console.log(`Winning state: ${state}`);
             if (state) {
                 let winner = currentPlayer.number === 1 ? '1' : '0';
                 winner === '1' ? addScore(p1Score) : addScore(p2Score);
-                console.log(`${winner} wins....`);
 
                 const winnerAnnouncement = document.querySelector('.winner-announcement');
                 winnerAnnouncement.style.display = 'flex';
@@ -161,7 +156,6 @@ const Game = (() => {
                 }, 5000);
 
                 addScore(draws);
-                console.log(`no one wins?....`);
                 const boxes = document.querySelectorAll('.box');
                 setTimeout(() => {
                     boxes.forEach((box) => {
@@ -175,7 +169,6 @@ const Game = (() => {
             Game.nextTurn();
         } else {
             // TODO: shaky animation (invalid/red)
-            console.log('Invalid move, please try again!');
         }
     };
 
@@ -190,7 +183,6 @@ const Game = (() => {
     };
 
     const reset = () => {
-        console.log('testing RESET button');
         document.querySelector('.turn').textContent = `${currentPlayer.name}'s Turn`;
         const boxes = document.querySelectorAll('.box');
         boxes.forEach((box) => {
